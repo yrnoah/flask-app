@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+
+{% block title %}My Flask{% endblock %}
+
+{% block head %}
+    {{ super() }}
+    <style type="text/css">
+        .txt { color: #FF0000; }
+    </style>
+{% endblock %}
+
+{% block content %}
+{% if name %}
+    <p class="txt">hello {{name}}!</p>
+{% else %}
+    <p class="txt">hello world!</p>
+{% endif %}
+{% endblock %}
